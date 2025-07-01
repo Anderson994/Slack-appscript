@@ -1,5 +1,6 @@
 const domain = "convenia.com.br";
-const slackWebhookUrl = "https://hooks.slack.com/services/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"; // Substitua pela sua URL real
+
+const slackWebhookUrl = PropertiesService.getScriptProperties().getProperty('SLACK_WEBHOOK_URL');
 
 function doPost(e) {
   try {
@@ -80,4 +81,3 @@ function doPost(e) {
       .setMimeType(ContentService.MimeType.TEXT);
   }
 }
-
